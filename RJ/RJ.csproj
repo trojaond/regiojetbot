@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Selenium.WebDriver" Version="3.13.1" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="2.40.0" />
+    <PackageReference Include="Selenium.Support" Version="3.13.1" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Emailer\EmailSender.css" />
+    <None Remove="appsetting.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="CheckingBot.cs" />
+    <Compile Remove="Emailer\Email.cs" />
+    <Compile Remove="Emailer\EmailMessage.cs" />
+    <Compile Remove="Emailer\EmailConfiguration.cs" />
+    <Compile Remove="EmailMessage.cs" />
+  </ItemGroup>
+</Project>
