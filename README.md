@@ -6,6 +6,7 @@ Prerequsities
 -------------
 
 - [.NET Core 2.1][1]
+- Google Chrome
 
 
 Usage
@@ -15,8 +16,11 @@ Get a copy of this repository and launch terminal in RJ folder. To run applicati
 ```
 dotnet run
 ``` 
+Windowless Google chrome searching can be disabled by commenting:  
 
-
+```csharp
+//chromeOptions.AddArguments("headless");
+```
 
 ###Destination and departure
 Proper setting is achieved in **Program.cs** where the departure and destination location is set. Note that the location must match list from 
@@ -36,6 +40,7 @@ Mails a delivered through my demo gmail account. It can be changed in **EmailSen
 client.Credentials = new NetworkCredential("YourEmail", "YourPassword");
 
 ```
+
 
 
 
