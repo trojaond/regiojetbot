@@ -17,8 +17,9 @@ namespace RJ
         static void Main(string[] args)
         {
 
-
-            IWebDriver driver = new ChromeDriver("/Users/ondra/Documents/Projects/Mine/RJ/RJ/bin/Debug/netcoreapp2.1/");
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArguments("headless");
+            IWebDriver driver = new ChromeDriver("/Users/ondra/Documents/Projects/Mine/RJ/RJ/bin/Debug/netcoreapp2.1/",chromeOptions);
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             //driver.Scripts().ExecuteScript("some script");
 
